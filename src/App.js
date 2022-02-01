@@ -1,15 +1,14 @@
 import React from "react";
 import GlobalStyle from "./components/GlobalStyle";
 //Import Pages
+import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 //Import Navigation
 import Nav from "./components/Nav";
+import MovieDetail from "./pages/MovieDetails";
 //Router
 import { Routes, Route } from "react-router-dom";
-
-//Import Pages
-import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AboutUs />} />
         <Route path="/work" element={<OurWork />} />
+        <Route path="/work/:id" element={<MovieDetail />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </div>
