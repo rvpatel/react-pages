@@ -1,26 +1,45 @@
 import React from "react";
-import home1 from '../img/home1.png'
+import home1 from '../img/home1.png';
+
+import { motion } from 'framer-motion/dist/framer-motion'
 
 //styled
 import { About, Hide, Description, Image } from "../styles";
 
 const AboutSection = () => {
+    const titleAnim = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { duration: 2 } },
+    };
+
+    const container = {
+        hidden: { x: 100 },
+        show: {
+            x: 0, transition: {
+                duration: 0.75,
+                ease: "easeOut",
+                staggerChildren: 1,
+                when: "afterChildren"
+            }
+        },
+    }
+
     return (
         <About>
             <Description>
-                <div className="title">
+                <motion.div variants={container} initial="hidden" animate="show" className="title">
                     <Hide>
-                        <h2>We work to make</h2>
+                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>
+                        <motion.h2 variants={titleAnim}>
                             your <span>derems</span> come
-                        </h2>
+                        </motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>true.</h2>
+                        <motion.h2 variants={titleAnim}>true.</motion.h2>
                     </Hide>
-                </div>
+                </motion.div>
                 <p>Contact us for any photography or videography ideas that you have. Also have a professional amazing slills.</p>
                 <button>Contact Us</button>
             </Description>
