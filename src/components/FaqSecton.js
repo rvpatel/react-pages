@@ -1,3 +1,4 @@
+import { AnimateSharedLayout } from 'framer-motion/dist/framer-motion'
 import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
@@ -7,46 +8,43 @@ const FaqSection = () => {
     return (
         <Faq>
             <h2>Any Questions? <span>FAQ</span></h2>
-            <Toggle>
-                <div className="question">
-                    <h4>HOw to do start?</h4>
+            <AnimateSharedLayout>
+                <Toggle title="How to do start?">
+                
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
+                        </div>
+                        <div className="faq-line"></div>
+                </Toggle>
+                <Toggle title="Daily Schedule">
+            
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
                     </div>
                     <div className="faq-line"></div>
-                </div>
-            </Toggle>
-            <Toggle>
-            <div className="question">
-                <h4>Daily Schedule</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
-                </div>
-                <div className="faq-line"></div>
-                </div>
-            </Toggle>
-            <Toggle>
-            <div className="question">
-                <h4>Whts new payment options?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
-                </div>
-                <div className="faq-line"></div>
-                </div>
-            </Toggle>
-            <Toggle>
-            <div className="question">
-                <h4>HOw to do start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
-                </div>
-                <div className="faq-line"></div>
-                </div>
-            </Toggle>
+                
+                </Toggle>
+                <Toggle title="Whts new payment options?">
+                
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
+                    </div>
+                    <div className="faq-line"></div>
+                    
+                </Toggle>
+                <Toggle title="HOw to do start?">
+            
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Excepturi nisi iusto architecto pariatur distinctio cupiditate tempore aperiam fugit facere labore. Itaque delectus perspiciatis vero est, excepturi autem error cum ipsum?</p>
+                    </div>
+                    <div className="faq-line"></div>
+
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     )
 }
